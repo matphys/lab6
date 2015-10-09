@@ -16,3 +16,20 @@
 | 8 3 5 4 5 1 |       |
 +-------------+-------+
 '''
+st= str(input())
+ls = []
+x = 0
+y = 0
+while st != "Treasure!":
+    ls = list(st.split(" "))
+    if(ls[0]== "North"):
+        y += int(ls[1])
+    elif (ls[0] == "South"):
+        y -= int(ls[1])
+    elif (ls[0] == "East"):
+        x += int(ls[1])
+    else:
+        x -= int(ls[1])
+    st = str(input())
+else:
+    print(x,y)
